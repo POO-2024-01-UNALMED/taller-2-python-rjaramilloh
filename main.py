@@ -5,16 +5,15 @@ class Asiento:
         self.registro = registro
     
     def cambiarColor(self, color):
-        color = color.upper
-        if color == "ROJO":
+        if color == "rojo":
             self.color = color
-        elif color == "VERDE":
+        elif color == "verde":
             self.color = color
-        elif color == "AMARILLO":
+        elif color == "amarillo":
             self.color = color
-        elif color == "NEGRO":
+        elif color == "negro":
             self.color = color
-        elif color == "BLANCO":
+        elif color == "blanco":
             self.color = color
 
 class Motor:
@@ -27,8 +26,7 @@ class Motor:
         self.registro = registro
 
     def asignarTipo(self, tipo):
-        tipo = tipo.upper
-        if tipo == "ELECTRICO" or tipo == "GASOLINA":
+        if tipo == "electrico" or tipo == "gasolina":
             self.tipo=tipo
 
 class Auto:
@@ -42,11 +40,11 @@ class Auto:
         self.registro = registro
 
     def cantidadAsientos(self):
-        i = 0
+        j = 0
         for i in range (0,len(self.asientos)):
             if (type(self.asientos[i]) == Asiento):
-                i=i+1
-        return i
+                j=j+1
+        return j
     
     def verificarIntegridad(self):
         prueba = "Auto original"
